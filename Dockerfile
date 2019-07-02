@@ -6,4 +6,4 @@ ENV PORT 8080
 EXPOSE 8080
 
 RUN unzip -qq /usr/local/tomcat/webapps/activiti-app.war -d /usr/local/tomcat/webapps/activiti-app/
-COPY target/demo-app-jar-2.0.jar /usr/local/tomcat/webapps/activiti-app/WEB-INF/lib/demo-app-jar-2.0.jar
+COPY target/*.jar /usr/local/tomcat/webapps/activiti-app/WEB-INF/lib/demo-app-jar-2.0.jar
