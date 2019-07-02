@@ -24,10 +24,10 @@ service:
 resources:
   limits:
     cpu: 2
-    memory: 1024Mi
+    memory: 4096Mi
   requests:
     cpu: 1
-    memory: 1024Mi
+    memory: 2048Mi
 probePath: /actuator/health
 livenessProbe:
   initialDelaySeconds: 60
