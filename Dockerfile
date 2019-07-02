@@ -1,4 +1,4 @@
-FROM 823639940192.dkr.ecr.us-east-1.amazonaws.com/alfresco:latest
+FROM alfresco/process-services:1.9.0
 LABEL author="Tapan"
 LABEL email="tapan.d.thakkar@gmail.com"
 
