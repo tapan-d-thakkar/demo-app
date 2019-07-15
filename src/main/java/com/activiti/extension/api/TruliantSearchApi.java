@@ -1,5 +1,7 @@
 package com.activiti.extension.api;
 
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.MediaType;
@@ -12,12 +14,12 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping(value = "/enterprise", produces = MediaType.APPLICATION_JSON_VALUE)
-//@Api(tags = { "truliant" }, description = "Truliant API")
+@Api(tags = { "truliant" }, description = "Truliant API")
 public class TruliantSearchApi {
 
 	private static final Logger logger = LoggerFactory.getLogger(TruliantSearchApi.class);
 
-//	@ApiOperation(value = "Query historic tasks")
+    @ApiOperation(value = "Query historic tasks")
 	@RequestMapping(value = "/truliant/search/historic-tasks/query", method = RequestMethod.POST)
 	public String search() {
 		return "This is another Test API.";

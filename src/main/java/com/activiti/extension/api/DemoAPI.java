@@ -1,5 +1,7 @@
 package com.activiti.extension.api;
 
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -11,10 +13,10 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping(value = "/enterprise/demo", produces = MediaType.APPLICATION_JSON_VALUE)
-//@Api(tags = { "demo" }, description = "Demo API")
+@Api(tags = { "demo" }, description = "Demo API")
 public class DemoAPI {
 
-//    @ApiOperation(value = "Demo API")
+    @ApiOperation(value = "Demo API")
     @RequestMapping(value = "/test", method = RequestMethod.GET)
     public String sampleTestApi() {
         return "Demo API Response";
