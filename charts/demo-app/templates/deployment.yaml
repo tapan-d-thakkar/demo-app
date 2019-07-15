@@ -19,10 +19,18 @@ spec:
 {{ toYaml .Values.podAnnotations | indent 8 }}
 {{- end }}
     spec:
+      volumes:
+      - name: license-volume
+        secret: 
+          secretName: activiti.lic
       containers:
       - name: {{ .Chart.Name }}
         image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
         imagePullPolicy: {{ .Values.image.pullPolicy }}
+        volumeMounts:
+        - name: license-volume
+          mountPath:  "/root/.activiti/enterprise-license/"
+          readOnly: true
         env:
 {{- range $pkey, $pval := .Values.env }}
         - name: {{ $pkey }}
