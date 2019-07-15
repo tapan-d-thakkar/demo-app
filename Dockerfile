@@ -1,4 +1,4 @@
-FROM alfresco/process-services:1.9.0
+FROM alfresco/process-services:1.9.0.1
 LABEL author="Tapan"
 LABEL email="tapan.d.thakkar@gmail.com"
 
